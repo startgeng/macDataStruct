@@ -1,6 +1,5 @@
 package com.kevin.datastruct.thread.demo;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
@@ -10,7 +9,6 @@ import java.util.concurrent.Semaphore;
  * 初体验多线程
  */
 public class CountExample {
-
     private static int threadTotal = 1;
     private static int clientTotal = 5000;
     private static long count = 0;
