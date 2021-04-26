@@ -10,7 +10,7 @@ public class MissNumberAlgorithm {
         //0～n-1 中缺失的数字
         int right = 0;
         int left = nums.length - 1;
-        while (left < right){
+        while (left <= right){
             int mid = (right + left) / 2;
             if (nums[mid] == mid){
                 left = mid + 1;
