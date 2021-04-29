@@ -3,8 +3,9 @@ package com.kevin.datastruct.algorithm;
 import java.util.Stack;
 
 /**
+ * 剑指offer06题
  * @author clg
- * 倒叙打印 链表
+ * 打印倒序链表
  */
 public class ReversePrint {
 
