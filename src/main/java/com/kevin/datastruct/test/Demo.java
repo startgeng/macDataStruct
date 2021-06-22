@@ -3,14 +3,12 @@ package com.kevin.datastruct.test;
 import com.google.common.collect.Lists;
 import com.kevin.datastruct.entity.Course;
 import com.kevin.datastruct.entity.StudentDTO;
+import com.kevin.datastruct.util.DateUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -165,4 +163,14 @@ public class Demo {
             System.out.println(entry.getValue());
         }
     }
+
+    @Test
+    public void demo13() throws InterruptedException {
+        Date date1 = new Date();
+        Thread.sleep(1000);
+        Date date2 = new Date();
+        int result = DateUtils.compareDate(date2, date1);
+        System.out.println(result);
+    }
+
 }
