@@ -1,6 +1,7 @@
 package com.kevin.datastruct.test;
 
 import com.kevin.datastruct.app.Appconfig;
+import com.kevin.datastruct.util.CollectionAndMapUtils;
 import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,16 +30,19 @@ public class Test {
 //        ac.getBean("");
         List<Integer> list = new ArrayList<>();
         list.add(1);
-        list.add(2);
-        list.add(3);
-        List<Integer> collect = list.stream().filter(e -> e.equals(2)).collect(Collectors.toList());
-        System.out.println(collect.toString());
-        System.out.println(list.toString());
-        List<Boolean> collect1 = list.stream().map(e -> {
-            return e.equals(2);
-        }).collect(Collectors.toList());
-        System.out.println(collect1.toString());
-        System.out.println(list.toString());
+//        list.add(2);
+//        list.add(3);
+//        List<Integer> collect = list.stream().filter(e -> e.equals(2)).collect(Collectors.toList());
+//        System.out.println(collect.toString());
+//        System.out.println(list.toString());
+//        List<Boolean> collect1 = list.stream().map(e -> {
+//            return e.equals(2);
+//        }).collect(Collectors.toList());
+//        System.out.println(collect1.toString());
+//        System.out.println(list.toString());
+        if (CollectionAndMapUtils.listIsEmpty(list)){
+            System.out.println("list == null");
+        }
     }
 
 

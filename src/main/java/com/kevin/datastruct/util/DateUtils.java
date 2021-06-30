@@ -3,6 +3,7 @@ package com.kevin.datastruct.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -42,5 +43,19 @@ public class DateUtils {
      */
     public static int compareDate(Date date1,Date date2){
         return date1.compareTo(date2);
+    }
+
+
+    /**
+     * 获取今天之前天数的时间
+     * @param d
+     * @param day 要获取之前的多少天
+     * @return
+     */
+    public static Date getDateBefore(Date d, int day) {
+        Calendar no = Calendar.getInstance();
+        no.setTime(d);
+        no.set(Calendar.DATE, no.get(Calendar.DATE) - day + 1);
+        return no.getTime();
     }
 }
