@@ -29,7 +29,7 @@ public class Test {
 //        beanDefinition.setDescription("aaa");
 //        ac.getBean("");
         List<Integer> list = new ArrayList<>();
-        list.add(1);
+//        list.add(1);
 //        list.add(2);
 //        list.add(3);
 //        List<Integer> collect = list.stream().filter(e -> e.equals(2)).collect(Collectors.toList());

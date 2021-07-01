@@ -58,4 +58,14 @@ public class DateUtils {
         no.set(Calendar.DATE, no.get(Calendar.DATE) - day + 1);
         return no.getTime();
     }
+
+    /**
+     * 比较date1和date2的大小
+     * @param startTIme
+     * @param endTIme
+     * @return
+     */
+    public static int date1CompareDate2(Date startTIme,Date endTIme){
+        return startTIme.compareTo(endTIme);
+    }
 }
