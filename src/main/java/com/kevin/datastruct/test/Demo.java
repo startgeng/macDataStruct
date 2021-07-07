@@ -166,11 +166,16 @@ public class Demo {
 
     @Test
     public void demo13() throws InterruptedException {
-        Date date1 = new Date();
-        Thread.sleep(1000);
-        Date date2 = new Date();
-        int result = DateUtils.compareDate(date2, date1);
-        System.out.println(result);
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(1);
+        list.add(2);
+        for (Integer i : list) {
+            if (i==1){
+                list.remove(1);
+            }
+        }
+        System.out.println(list.toString());
     }
 
 }
