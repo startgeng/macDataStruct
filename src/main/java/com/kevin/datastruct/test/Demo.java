@@ -3,6 +3,8 @@ package com.kevin.datastruct.test;
 import com.google.common.collect.Lists;
 import com.kevin.datastruct.entity.Course;
 import com.kevin.datastruct.entity.StudentDTO;
+import com.kevin.datastruct.entity.User;
+import com.kevin.datastruct.enums.SecondDrugEnum;
 import com.kevin.datastruct.util.DateUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -176,6 +178,41 @@ public class Demo {
             }
         }
         System.out.println(list.toString());
+    }
+
+    @Test
+    public void demo14(){
+        System.out.println(SecondDrugEnum.getByCode(1).getName());
+    }
+
+    @Test
+    public void demo15() throws InterruptedException {
+        Date date1 = new Date();
+        Thread.sleep(3000);
+        Date date2 = new Date();
+        List<User> list = Lists.newArrayList();
+        User user1 = new User("张三","23",1,date1,new Date());
+        User user2 = new User("李四","24",1,date2,new Date());
+        list.add(user1);
+        list.add(user2);
+        System.out.println(list.toString());
+        list.sort((User u1,User u2) -> u2.getCreateTime().compareTo(u1.getCreateTime()));
+        System.out.println(list.toString());
+    }
+
+    @Test
+    public void demo16() throws InterruptedException {
+        Date date1 = new Date();
+        Thread.sleep(3000);
+        Date date2 = new Date();
+        List<User> list = Lists.newArrayList();
+        User user1 = new User("张三","23",1,date1,new Date());
+        User user2 = new User("李四","24",1,date2,new Date());
+        list.add(user1);
+        list.add(user2);
+        System.out.println(list.toString());
+        List<User> userList = list.stream().sorted(Comparator.comparing(User::getCreateTime).reversed()).collect(Collectors.toList());
+        System.out.println(userList.toString());
     }
 
 }

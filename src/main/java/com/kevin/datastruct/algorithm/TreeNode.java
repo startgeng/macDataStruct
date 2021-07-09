@@ -5,19 +5,12 @@ package com.kevin.datastruct.algorithm;
  */
 public class TreeNode {
 
-    int val;
-    TreeNode left;
-    TreeNode right;
+    int data;
+    TreeNode leftChild;
 
-    TreeNode(){}
+    TreeNode rightChild;
 
-    TreeNode(int val){
-        this.val = val;
-    }
-
-    TreeNode(TreeNode left,TreeNode right,int val){
-        this.left = left;
-        this.right = right;
-        this.val = val;
+    public TreeNode(int data){
+        this.data = data;
     }
 }

@@ -58,6 +58,16 @@ public class User {
     }
 
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", sex=" + sex +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
+    }
 
     public User(String name, String age, Integer sex, Date createTime, Date updateTime) {
         this.name = name;
