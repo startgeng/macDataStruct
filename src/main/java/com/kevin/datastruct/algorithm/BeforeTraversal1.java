@@ -11,23 +11,23 @@ import java.util.Stack;
  */
 public class BeforeTraversal1 {
 
-    public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> list = Lists.newArrayList();
-        if (root == null){
-            return list;
-        }
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()){
-            TreeNode t1 = stack.pop();
-            if (t1.left!=null){
-                stack.push(t1.left);
-            }
-            if (t1.right!=null){
-                stack.push(t1.right);
-            }
-            list.add(t1.val);
-        }
-        return list;
-    }
+//    public List<Integer> preorderTraversal(TreeNode root) {
+//        List<Integer> list = Lists.newArrayList();
+//        if (root == null){
+//            return list;
+//        }
+//        Stack<TreeNode> stack = new Stack<>();
+//        stack.push(root);
+//        while (!stack.isEmpty()){
+//            TreeNode t1 = stack.pop();
+//            if (t1.left!=null){
+//                stack.push(t1.left);
+//            }
+//            if (t1.right!=null){
+//                stack.push(t1.right);
+//            }
+//            list.add(t1.val);
+//        }
+//        return list;
+//    }
 }
