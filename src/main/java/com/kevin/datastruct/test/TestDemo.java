@@ -23,5 +23,6 @@ public class TestDemo {
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
         String format = sdf1.format(parse);
         System.out.println(sdf1.parse(format));
+        System.out.println("测试数据");
     }
 }
