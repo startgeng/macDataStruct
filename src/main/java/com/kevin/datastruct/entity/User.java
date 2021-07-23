@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @author chenligeng
  */
-public class User {
+public class User implements Cloneable{
 
     private String name;
 
@@ -16,6 +16,11 @@ public class User {
     private Date createTime;
 
     private Date updateTime;
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     public String getName() {
         return name;
@@ -75,5 +80,50 @@ public class User {
         this.sex = sex;
         this.createTime = createTime;
         this.updateTime = updateTime;
+    }
+
+
+    public static final class UserBuilder {
+        private String name;
+        private String age;
+        private Integer sex;
+        private Date createTime;
+        private Date updateTime;
+
+        private UserBuilder() {
+        }
+
+        public static UserBuilder anUser() {
+            return new UserBuilder();
+        }
+
+        public UserBuilder withName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public UserBuilder withAge(String age) {
+            this.age = age;
+            return this;
+        }
+
+        public UserBuilder withSex(Integer sex) {
+            this.sex = sex;
+            return this;
+        }
+
+        public UserBuilder withCreateTime(Date createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        public UserBuilder withUpdateTime(Date updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+
+        public User build() {
+            return new User(name, age, sex, createTime, updateTime);
+        }
     }
 }

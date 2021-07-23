@@ -1,15 +1,9 @@
 package com.kevin.datastruct.test;
 
-import com.kevin.datastruct.app.Appconfig;
 import com.kevin.datastruct.entity.User;
-import com.kevin.datastruct.util.CollectionAndMapUtils;
-import org.springframework.beans.factory.support.GenericBeanDefinition;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.util.Assert;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -48,17 +42,26 @@ public class Test {
 //        }
 //    }
 
-    public static void main(String[] args) throws InterruptedException {
-        Date date1 = new Date();
-        Thread.sleep(3000);
-        Date date2 = new Date();
-        User user1 = new User("张三","23",1,date1,new Date());
-        User user2 = new User("李四","24",1,date2,new Date());
-        List<User> list = new ArrayList();
-        list.add(user1);
-        list.add(user2);
-        System.out.println(list.toString());
-        List<User> userList = list.stream().sorted(Comparator.comparing(User::getCreateTime).reversed()).collect(Collectors.toList());
-        System.out.println(userList.toString());
+    public static void main(String[] args) throws InterruptedException, CloneNotSupportedException {
+//        Date date1 = new Date();
+//        Thread.sleep(3000);
+//        Date date2 = new Date();
+//        User user1 = new User("张三","23",1,date1,new Date());
+//        User user2 = new User("李四","24",1,date2,new Date());
+//        List<User> list = new ArrayList();
+//        list.add(user1);
+//        list.add(user2);
+//        System.out.println(list.toString());
+//        List<User> userList = list.stream().sorted(Comparator.comparing(User::getCreateTime).reversed()).collect(Collectors.toList());
+//        System.out.println(userList.toString());
+//        User user = User.UserBuilder.anUser().withAge("23").build();
+//        User clone = (User) user1.clone();
+//        System.out.println(clone);
+//
+//        User user3 = null;
+//        Assert.isNull(user1,"用户为空");
+        Map<String,Integer> map = new HashMap<>();
+        map.put("1",1);
+        System.out.println(map.get(2));
     }
 }
