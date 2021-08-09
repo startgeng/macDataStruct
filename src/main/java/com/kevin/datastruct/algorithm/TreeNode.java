@@ -5,10 +5,10 @@ package com.kevin.datastruct.algorithm;
  */
 public class TreeNode {
 
-    int data;
-    TreeNode leftChild;
+    public int data;
+    public TreeNode leftChild;
 
-    TreeNode rightChild;
+    public TreeNode rightChild;
 
     public TreeNode(int data){
         this.data = data;
